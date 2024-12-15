@@ -1,0 +1,80 @@
+﻿/* 3D WIN Animation */
+.word-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    perspective: 1000px; /* Enables 3D effect */
+    gap: 20px; /* Space between letters */
+}
+
+.letter {
+    font-size: 80px;
+    font-weight: bold;
+    color: #1b6ec2;
+    text-align: center;
+    transform-style: preserve-3d;
+    animation: spin 3s infinite linear;
+}
+
+/* Customize animations for each letter */
+#letter-w {
+    animation-delay: 0s;
+    color: #ff4500;
+}
+
+#letter-i {
+    animation-delay: 0.5s;
+    color: #32cd32;
+}
+
+#letter-n {
+    animation-delay: 1s;
+    color: #1e90ff;
+}
+
+/* Define the spin animation */
+@keyframes spin {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateX(180deg) rotateY(180deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+/* Heading Color-Changing Animation */
+@keyframes color-change {
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: orange;
+    }
+
+    50% {
+        color: yellow;
+    }
+
+    75% {
+        color: green;
+    }
+
+    100% {
+        color: blue;
+    }
+}
+
+.green-text {
+    color: green; /* Default color */
+}
+
+.color-transition {
+    animation: color-change 2s infinite; /* Apply the animation */
+}
